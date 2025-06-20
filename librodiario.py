@@ -1,3 +1,5 @@
+import logging
+logging.basicConfig(filename='log_contable.log', level=logging.ERROR)
 from datetime import datetime
 from typing import List, Dict
 
@@ -9,8 +11,11 @@ class LibroDiario:
 
     def agregar_transaccion(self, fecha: str, descripcion: str, monto: float, tipo: str) -> None:
         """Agrega una transacción al libro diario."""
+        tipo = tipo.lower().strip()
         if tipo not in ("ingreso", "egreso"):
-            raise ValueError("Tipo de transacción inválido. Use 'ingreso' o 'egreso'.")
+            logging.error(f"Tipo inválido: '{tipo}'. Debe ser 'ingreso' o 'egreso'.")
+            print("Error: Tipo inválido. Por favor ingrese 'ingreso' o 'egreso'.")
+            return
 
         transaccion = {
             "fecha": datetime.strptime(fecha, "%d/%m/%Y"),
