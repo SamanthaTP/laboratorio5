@@ -58,3 +58,20 @@ class LibroDiario:
             else:
                 resumen["egresos"] += transaccion["monto"]
         return resumen
+    
+    def cargar_transacciones_desde_archivo(self, path: str) -> None:
+        try:
+            with open(path, "r", encoding="utf-8") as archivo:
+                for linea_num, linea in enumerate(archivo, start=1):
+                    linea = linea.strip()
+                    if not linea:
+                        continue  
+                    try:
+                        fecha, descripcion, monto, tipo = linea.split(";")
+                        self.agregar_transaccion(fecha, descripcion, monto, tipo)
+                    except ValueError as e:
+                        logging.exception(f"Error en línea {linea_num}: {linea} — {e}")
+        except FileNotFoundError:
+            logging.exception(f"No se encontró el archivo: {path}")
+        except Exception as e:
+            logging.exception(f"Error al leer: {e}")
