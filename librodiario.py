@@ -3,6 +3,9 @@ logging.basicConfig(filename='log_contable.log', level=logging.ERROR)
 from datetime import datetime
 from typing import List, Dict
 
+class Montoerror(Exception):
+    pass
+
 class LibroDiario:
     """Gestión contable básica de ingresos y egresos."""
 
@@ -16,6 +19,13 @@ class LibroDiario:
             logging.error(f"Tipo inválido: '{tipo}'. Debe ser 'ingreso' o 'egreso'.")
             print("Error: Tipo inválido. Por favor ingrese 'ingreso' o 'egreso'.")
             return
+        try:
+            datetime.strptime(fecha, "%d/%m/%Y")
+        except ValueError:
+            raise ValueError(f"Formato de fecha inválido: {fecha}.")
+        monto = float(monto)
+        if monto <= 0:
+            raise Montoerror(f"Monto $ inválido: {monto}.")
 
         transaccion = {
             "fecha": datetime.strptime(fecha, "%d/%m/%Y"),
