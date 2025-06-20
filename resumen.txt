@@ -1,0 +1,4 @@
+Resumen Contable
+Total Ingresos: 2500.00
+Total Egresos: 0.00
+Total: 2500.00

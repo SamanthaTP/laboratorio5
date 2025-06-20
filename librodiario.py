@@ -75,3 +75,24 @@ class LibroDiario:
             logging.exception(f"No se encontró el archivo: {path}")
         except Exception as e:
             logging.exception(f"Error al leer: {e}")
+    def calcular_resumen2(self) -> dict:
+        ingreso_total = sum(t['monto'] for t in self.transacciones if t['tipo'] == 'ingreso')
+        egreso_total = sum(t['monto'] for t in self.transacciones if t['tipo'] == 'egreso')
+        balance = ingreso_total - egreso_total
+        return {
+            'total_ingresos': ingreso_total,
+            'total_egresos': egreso_total,
+            'balance': balance
+        }
+
+    def exportar_resumen(self, path: str) -> None:
+        resumen = self.calcular_resumen2()
+        try:
+            with open(path, "w", encoding="utf-8") as archivo:
+                archivo.write("Resumen Contable\n")
+                archivo.write(f"Total Ingresos: {resumen['total_ingresos']:.2f}\n")
+                archivo.write(f"Total Egresos: {resumen['total_egresos']:.2f}\n")
+                archivo.write(f"Total: {resumen['balance']:.2f}\n")
+            logging.info(f"Resumen exitosamento a {path}")
+        except Exception as e:
+            logging.exception(f"Error al exportar : {e}")

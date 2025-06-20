@@ -55,3 +55,120 @@ Traceback (most recent call last):
   File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 24, in agregar_transaccion
     raise ValueError(f"Formato de fecha inválido: {fecha}.")
 ValueError: Formato de fecha inválido: 18/06/2025.
+ERROR:root:ValueError: Formato de fecha inválido: 18/06/2025.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 22, in agregar_transaccion
+    datetime.strptime(fecha, "%Y-%m-%d")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\administradormz\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 673, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\administradormz\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 452, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '18/06/2025' does not match format '%Y-%m-%d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 24, in agregar_transaccion
+    raise ValueError(f"Formato de fecha inválido: {fecha}.")
+ValueError: Formato de fecha inválido: 18/06/2025.
+ERROR:root:ValueError: Formato de fecha inválido: 18/06/2025.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 22, in agregar_transaccion
+    datetime.strptime(fecha, "%Y-%m-%d")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\administradormz\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 673, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\administradormz\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 452, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '18/06/2025' does not match format '%Y-%m-%d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 24, in agregar_transaccion
+    raise ValueError(f"Formato de fecha inválido: {fecha}.")
+ValueError: Formato de fecha inválido: 18/06/2025.
+ERROR:root:ValueError: Formato de fecha inválido: 18/06/2025.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 22, in agregar_transaccion
+    datetime.strptime(fecha, "%Y-%m-%d")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\administradormz\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 673, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\administradormz\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 452, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '18/06/2025' does not match format '%Y-%m-%d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 24, in agregar_transaccion
+    raise ValueError(f"Formato de fecha inválido: {fecha}.")
+ValueError: Formato de fecha inválido: 18/06/2025.
+ERROR:root:MontoError: Monto inválido: -54.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -54.0.
+ERROR:root:MontoError: Monto inválido: -20.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -20.0.
+ERROR:root:MontoError: Monto inválido: -100.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -100.0.
+ERROR:root:MontoError: Monto inválido: -54.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -54.0.
+ERROR:root:MontoError: Monto inválido: -20.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -20.0.
+ERROR:root:MontoError: Monto inválido: -100.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -100.0.
+ERROR:root:MontoError: Monto inválido: -54.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -54.0.
+ERROR:root:MontoError: Monto inválido: -20.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -20.0.
+ERROR:root:MontoError: Monto inválido: -100.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -100.0.
+ERROR:root:MontoError: Monto inválido: -54.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -54.0.
+ERROR:root:MontoError: Monto inválido: -20.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -20.0.
+ERROR:root:MontoError: Monto inválido: -100.0.
+Traceback (most recent call last):
+  File "c:\Users\administradormz\Documents\Laboratorio5\librodiario.py", line 28, in agregar_transaccion
+    raise Montoerror(f"Monto inválido: {monto}.")
+librodiario.Montoerror: Monto inválido: -100.0.
