@@ -13,27 +13,41 @@ class LibroDiario:
         self.transacciones: List[Dict] = []
 
     def agregar_transaccion(self, fecha: str, descripcion: str, monto: float, tipo: str) -> None:
-        """Agrega una transacción al libro diario."""
-        tipo = tipo.lower().strip()
-        if tipo not in ("ingreso", "egreso"):
-            logging.error(f"Tipo inválido: '{tipo}'. Debe ser 'ingreso' o 'egreso'.")
-            print("Error: Tipo inválido. Por favor ingrese 'ingreso' o 'egreso'.")
-            return
+        """Agrega una transacción al libro diario.""" 
         try:
-            datetime.strptime(fecha, "%d/%m/%Y")
-        except ValueError:
-            raise ValueError(f"Formato de fecha inválido: {fecha}.")
-        monto = float(monto)
-        if monto <= 0:
-            raise Montoerror(f"Monto $ inválido: {monto}.")
+            tipo = tipo.strip().lower()
+            if tipo not in ("ingreso", "egreso"):
+                raise ValueError(f"Tipo inválido: {tipo}")
+            try:
+                datetime.strptime(fecha, "%Y-%m-%d")
+            except ValueError:
+                raise ValueError(f"Formato de fecha inválido: {fecha}.")
+            
+            monto = float(monto)
+            if monto <= 0:
+                raise Montoerror(f"Monto inválido: {monto}.")
 
-        transaccion = {
-            "fecha": datetime.strptime(fecha, "%d/%m/%Y"),
-            "descripcion": descripcion,
-            "monto": monto,
-            "tipo": tipo
-        }
-        self.transacciones.append(transaccion)
+            transaccion = {
+                "fecha": fecha,
+                "descripcion": descripcion,
+                "monto": monto,
+                "tipo": tipo
+            }
+            self.transacciones.append(transaccion)
+            logging.info(f"Transacción exitosamente: {transaccion}")
+            print("Transacción correctamente.")
+
+        except ValueError as ve:
+            logging.exception(f"ValueError: {ve}")
+            print(f"Error de valor: {ve}")
+
+        except Montoerror as me:
+            logging.exception(f"MontoError: {me}")
+            print(f"Error de monto: {me}")
+
+        except Exception as e:
+            logging.exception(f"Error inesperado: {e}")
+            print(f"Error inesperado: {e}")
 
     def calcular_resumen(self) -> Dict[str, float]:
         """Devuelve el resumen total de ingresos y egresos."""
